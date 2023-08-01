@@ -150,4 +150,12 @@
             </p>
         </field>
     </record>
+<!--    <record id="field_list_action" model="ir.actions.act_window">-->
+<!--        <field name="name">Field List of Model</field>-->
+<!--        <field name="res_model">model.field</field>-->
+<!--        <field name="view_mode">tree,kanban,form</field>-->
+<!--        <field name="target">new</field>-->
+
+
+<!--    </record>-->
 </odoo>

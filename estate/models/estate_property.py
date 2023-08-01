@@ -120,3 +120,32 @@ class EstateProperty(models.Model):
         if "sold" in self.mapped("state"):
             raise UserError("Sold properties cannot be canceled.")
         return self.write({"state": "canceled"})
+    def print_report(self):
+        print("click")
+        self.env['ir.model.fields'].search([('model_id', '=', model.id)])
+
+#
+# class ModelFields(models.Model):
+#     _name = "model.field"
+#
+#     is_relational = fields.Boolean()
+#     model = fields.Many2one('ir.model', string='Model Name')
+#     model_name = fields.Char(string='Model Name')
+#
+#     def fun_model(self,model_name):
+#         self.env['ir.model.fields'].search([('model_id', '=', model.id)])
+#
+#         model = self.env[model_name]
+#         fields_info = model.fields_get()
+#         print("Fields in the model'{} :".format(model_name))
+#         for field_name, field_info in fields_info.items():
+#             print(field_name)
+#         action = self.sudo().env.ref('estate.action_field_list_generate').read()[0]
+#
+#
+#     def print_report(self):
+#         print("click")
+#         self.env['ir.model.fields'].search([('model_id', '=', model.id)])
+#
+
+
